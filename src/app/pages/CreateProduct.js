@@ -2,7 +2,6 @@ import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useHistory} from "react-router-dom";
 import {Header} from "../layouts/Header";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Card, Button} from 'react-bootstrap';
 import Cookies from "js-cookie";
 import {serialize} from "object-to-formdata";
