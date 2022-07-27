@@ -43,7 +43,7 @@ export function HomeIndex() {
                                                       className="img-thumbnail"/>
                                             <Card.Body style={{minHeight: '100px'}}>
                                                 <Card.Title>{product?.name}</Card.Title>
-                                                <Card.Text className='text-muted'>
+                                                <div className='text-muted card-text'>
                                                     <ShowMoreText
                                                         lines={2}
                                                         more="Show more"
@@ -56,7 +56,7 @@ export function HomeIndex() {
                                                     >
                                                         {product?.description}
                                                     </ShowMoreText>
-                                                </Card.Text>
+                                                </div>
                                             </Card.Body>
                                         </Card>
                                     </div>

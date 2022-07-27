@@ -9,3 +9,7 @@ export function create(payload) {
         'content-type': 'multipart/form-data'
     });
 }
+
+export function patch(id, payload) {
+    return axios.patch(`/products/${id}`, payload)
+}

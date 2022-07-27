@@ -14,7 +14,7 @@ export const getProducts = (history) => dispatch => {
                 handleNotificationPrompt('Error!', response.data.message, 'error', history, '/');
                 return false;
             }
-            
+
             dispatch(actions.products(response.data.data));
             // handleNotificationPrompt('Success!', response.data.message, 'success');
             return response.data;
@@ -33,6 +33,19 @@ export const create = (payload, history) => dispatch => {
             }
 
             // handleNotificationPrompt('Success!', response.data.message, 'success');
+            return response.data;
+        });
+};
+
+export const update = (id, payload) => dispatch => {
+    dispatch(actions.startCall({}));
+
+    return requestFromServer.patch(id, payload)
+        .then(response => {
+            if (!response.data.success) {
+                dispatch(actions.catchError({message: response.data.message}));
+                return false;
+            }
             return response.data;
         });
 };
