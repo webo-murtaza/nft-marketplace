@@ -11,7 +11,7 @@ import {Loader} from "../layouts/Loader";
 export function CreateProduct() {
     const dispatch = useDispatch();
     let history = useHistory()
-    const contractId = "0x0A6d0D6a91cEC082E0865D42F60Ad701e5335F7f";
+    const contractId = "0xA694c459A58FCb59C89Eb8b754BBd703939b1973";
     const ABI = [
         {
             "inputs": [],
